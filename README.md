@@ -2,6 +2,10 @@
 
 This repository contains an implementation of a hand gesture recognition system using Mediapipe for hand landmark extraction and a neural network for classification. The model is trained on extracted hand features and can be tested in real-time using a webcam.
 
+
+https://github.com/user-attachments/assets/b07608f2-cf4c-48ca-9302-131f257f920d
+
+
 ## Files in this Repository
 
 - `main.py` - Runs real-time gesture recognition using the user's webcam.
