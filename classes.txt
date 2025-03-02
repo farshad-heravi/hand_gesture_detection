@@ -1,0 +1,10 @@
+palm_upward
+index_upward
+fist
+thumb_up
+thumb_down
+two_finger_up
+grip
+closed_hand
+vertical_fingers
+index_left

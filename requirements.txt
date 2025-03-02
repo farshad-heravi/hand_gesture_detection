@@ -1,0 +1,6 @@
+numpy==1.26.4
+opencv-python==4.11.0.86
+mediapipe==0.10.21
+matplotlib==3.10.0
+pickleshare==0.7.5
+torch==2.3.0
