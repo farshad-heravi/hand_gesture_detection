@@ -7,10 +7,7 @@
 
 I developed a **production-ready hand gesture detection system** capable of recognizing 10 distinct hand gestures in real-time with **99.47% accuracy**. This project utilized various techniques from computer vision, deep learning, and software engineering fields, featuring a complete end-to-end pipeline from data collection to deployment.
 
-<!-- <div align="center"> -->
-[![Hande Gesture Detection Demo](https://img.youtube.com/vi/JbhiD4TYPnU/0.jpg)](https://youtu.be/JbhiD4TYPnU)
-<!-- </div> -->
-
+![hand_gesture_detection_demo](https://github.com/user-attachments/assets/62afb9a6-69b9-49f2-9846-f9ab02461620)
 
 ### Key Achievements
 - ✅ **Reliable Detections** - Test Set accuracy of 99.47% 
@@ -126,7 +123,7 @@ The learning curves reveal critical insights about model behavior:
 
 The confusion matrix for Model 2 (deep_regularized) - the best generalizing model - reveals its performance across all gesture classes:
 
-![Confusion Matrix - Model 2](confusion_matrix_deep_regularized.png)
+![Confusion Matrix - Model 2](results/confusion_matrix_deep_regularized.png)
 *Model 2 (Deep Regularized) - Confusion Matrix showing 99.47% test accuracy*
 
 **Key Insights from Confusion Matrix:**
