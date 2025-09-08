@@ -16,6 +16,10 @@ I developed a **production-ready hand gesture detection system** capable of reco
 - ✅ **Professional Codebase** - Production-ready with modern software practices
 - ✅ **Complete MLOps Pipeline** - Data collection, training, evaluation, and deployment
 
+**Hand Gesture Detection Flowchart**
+
+<img src="media/hand_gesture_flowchart.png" alt="Detection Pipeline" width="50%">
+
 ---
 
 ## 🏗️ Technical Architecture
