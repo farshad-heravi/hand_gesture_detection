@@ -1,0 +1,70 @@
+# Inference Configuration
+inference:
+  # Model settings
+  model:
+    path: "models/trained/ensemble_model_2_20250907_202753.pth"
+    input_size: 39
+    num_classes: 10
+    device: "auto"  # auto, cpu, cuda
+    
+  # Camera settings
+  camera:
+    device_id: 4 # external camera
+    width: 640
+    height: 480
+    fps: 30
+    
+  # MediaPipe settings
+  mediapipe:
+    mode: "video" # video, image
+    max_num_hands: 1
+    min_detection_confidence: 0.5
+    min_tracking_confidence: 0.5
+    
+  # Processing settings
+  processing:
+    roi_size: [320, 320] # [width, height]
+    confidence_threshold: 0.5
+    smoothing_window: 5
+    temporal_consistency: true
+    
+  # Display settings
+  display:
+    show_landmarks: true
+    show_confidence: true
+    show_roi: true
+    show_fps: true
+    font_scale: 1.0
+    font_thickness: 2
+    # Landmark visualization settings
+    landmark_color: [0, 255, 0]  # Green (BGR)
+    connection_color: [255, 0, 0]  # Blue (BGR)
+    landmark_radius: 3
+    connection_thickness: 2
+    show_landmark_indices: false  # Show landmark numbers for debugging
+    
+  # Performance
+  performance:
+    target_fps: 30
+    max_processing_time: 33  # ms
+    enable_optimization: true
+    
+  # Output
+  output:
+    save_video: false
+    video_path: "output/demo.mp4"
+    log_predictions: false
+    log_path: "logs/inference"
+    
+  # Gesture mapping (must match training data label mapping)
+  gesture_mapping:
+    closed_hand: "Closed Fingers"
+    fist: "Fist"
+    grip: "Grip"
+    index_left: "Index Left"
+    index_upward: "Index Upward"
+    palm_upward: "Palm Forward"
+    thumb_down: "Thumb Down"
+    thumb_up: "Thumb Up"
+    two_finger_up: "Two Fingers Up"
+    vertical_fingers: "Horizontal Fingers"

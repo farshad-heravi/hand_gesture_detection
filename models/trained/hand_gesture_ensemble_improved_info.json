@@ -1,0 +1,245 @@
+{
+  "ensemble_info": [
+    {
+      "model_path": "models/trained/ensemble_model_1_20250907_202701.pth",
+      "best_val_accuracy": 1.0,
+      "best_epoch": 5,
+      "total_epochs": 55,
+      "model_config": {
+        "name": "AdvancedHandGestureNet",
+        "hidden_sizes": [
+          256,
+          512,
+          1024,
+          512,
+          256,
+          128
+        ],
+        "dropout_rate": 0.3,
+        "activation": "mish",
+        "use_attention": true,
+        "attention_heads": 4,
+        "learning_rate": 0.0005,
+        "batch_size": 32,
+        "weight_decay": 0.001,
+        "model_id": "moderate_regularized"
+      },
+      "model_id": "moderate_regularized",
+      "test_accuracy": 1.0
+    },
+    {
+      "model_path": "models/trained/ensemble_model_2_20250907_202753.pth",
+      "best_val_accuracy": 0.9973333333333333,
+      "best_epoch": 4,
+      "total_epochs": 54,
+      "model_config": {
+        "name": "AdvancedHandGestureNet",
+        "hidden_sizes": [
+          128,
+          256,
+          512,
+          1024,
+          512,
+          256,
+          128,
+          64
+        ],
+        "dropout_rate": 0.4,
+        "activation": "swish",
+        "use_attention": true,
+        "attention_heads": 8,
+        "learning_rate": 0.0003,
+        "batch_size": 24,
+        "weight_decay": 0.002,
+        "model_id": "deep_regularized"
+      },
+      "model_id": "deep_regularized",
+      "test_accuracy": 0.9946666666666667
+    },
+    {
+      "model_path": "models/trained/ensemble_model_3_20250907_202929.pth",
+      "best_val_accuracy": 1.0,
+      "best_epoch": 2,
+      "total_epochs": 52,
+      "model_config": {
+        "name": "AdvancedHandGestureNet",
+        "hidden_sizes": [
+          512,
+          1024,
+          2048,
+          1024,
+          512,
+          256
+        ],
+        "dropout_rate": 0.25,
+        "activation": "gelu",
+        "use_attention": true,
+        "attention_heads": 8,
+        "learning_rate": 0.0004,
+        "batch_size": 16,
+        "weight_decay": 0.0015,
+        "model_id": "wide_regularized"
+      },
+      "model_id": "wide_regularized",
+      "test_accuracy": 0.9946666666666667
+    },
+    {
+      "model_path": "models/trained/ensemble_model_4_20250907_203042.pth",
+      "best_val_accuracy": 1.0,
+      "best_epoch": 36,
+      "total_epochs": 86,
+      "model_config": {
+        "name": "AdvancedHandGestureNet",
+        "hidden_sizes": [
+          192,
+          384,
+          768,
+          384,
+          192,
+          96
+        ],
+        "dropout_rate": 0.35,
+        "activation": "mish",
+        "use_attention": true,
+        "attention_heads": 6,
+        "learning_rate": 0.0002,
+        "batch_size": 28,
+        "weight_decay": 0.0012,
+        "model_id": "balanced_regularized"
+      },
+      "model_id": "balanced_regularized",
+      "test_accuracy": 1.0
+    },
+    {
+      "model_path": "models/trained/ensemble_model_5_20250907_203135.pth",
+      "best_val_accuracy": 1.0,
+      "best_epoch": 23,
+      "total_epochs": 73,
+      "model_config": {
+        "name": "AdvancedHandGestureNet",
+        "hidden_sizes": [
+          64,
+          128,
+          256,
+          512,
+          256,
+          128,
+          64,
+          32
+        ],
+        "dropout_rate": 0.2,
+        "activation": "swish",
+        "use_attention": true,
+        "attention_heads": 4,
+        "learning_rate": 0.0008,
+        "batch_size": 40,
+        "weight_decay": 0.0005,
+        "model_id": "compact_regularized"
+      },
+      "model_id": "compact_regularized",
+      "test_accuracy": 1.0
+    }
+  ],
+  "model_configs": [
+    {
+      "name": "AdvancedHandGestureNet",
+      "hidden_sizes": [
+        256,
+        512,
+        1024,
+        512,
+        256,
+        128
+      ],
+      "dropout_rate": 0.3,
+      "activation": "mish",
+      "use_attention": true,
+      "attention_heads": 4,
+      "learning_rate": 0.0005,
+      "batch_size": 32,
+      "weight_decay": 0.001,
+      "model_id": "moderate_regularized"
+    },
+    {
+      "name": "AdvancedHandGestureNet",
+      "hidden_sizes": [
+        128,
+        256,
+        512,
+        1024,
+        512,
+        256,
+        128,
+        64
+      ],
+      "dropout_rate": 0.4,
+      "activation": "swish",
+      "use_attention": true,
+      "attention_heads": 8,
+      "learning_rate": 0.0003,
+      "batch_size": 24,
+      "weight_decay": 0.002,
+      "model_id": "deep_regularized"
+    },
+    {
+      "name": "AdvancedHandGestureNet",
+      "hidden_sizes": [
+        512,
+        1024,
+        2048,
+        1024,
+        512,
+        256
+      ],
+      "dropout_rate": 0.25,
+      "activation": "gelu",
+      "use_attention": true,
+      "attention_heads": 8,
+      "learning_rate": 0.0004,
+      "batch_size": 16,
+      "weight_decay": 0.0015,
+      "model_id": "wide_regularized"
+    },
+    {
+      "name": "AdvancedHandGestureNet",
+      "hidden_sizes": [
+        192,
+        384,
+        768,
+        384,
+        192,
+        96
+      ],
+      "dropout_rate": 0.35,
+      "activation": "mish",
+      "use_attention": true,
+      "attention_heads": 6,
+      "learning_rate": 0.0002,
+      "batch_size": 28,
+      "weight_decay": 0.0012,
+      "model_id": "balanced_regularized"
+    },
+    {
+      "name": "AdvancedHandGestureNet",
+      "hidden_sizes": [
+        64,
+        128,
+        256,
+        512,
+        256,
+        128,
+        64,
+        32
+      ],
+      "dropout_rate": 0.2,
+      "activation": "swish",
+      "use_attention": true,
+      "attention_heads": 4,
+      "learning_rate": 0.0008,
+      "batch_size": 40,
+      "weight_decay": 0.0005,
+      "model_id": "compact_regularized"
+    }
+  ],
+  "created_at": "2025-09-07T20:31:46.203113"
+}

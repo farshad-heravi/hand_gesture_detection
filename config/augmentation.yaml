@@ -1,0 +1,70 @@
+# Data Augmentation Configuration
+augmentation:
+  # Geometric transformations
+  geometric:
+    rotation:
+      enabled: true
+      max_angle: 15  # degrees
+      probability: 0.5
+      
+    scaling:
+      enabled: true
+      scale_range: [0.9, 1.1]
+      probability: 0.3
+      
+    translation:
+      enabled: true
+      max_shift: 0.1  # fraction of image size
+      probability: 0.3
+      
+  # Photometric transformations
+  photometric:
+    brightness:
+      enabled: true
+      brightness_range: 0.2
+      probability: 0.4
+      
+    contrast:
+      enabled: true
+      contrast_range: 0.2
+      probability: 0.4
+      
+    noise:
+      enabled: true
+      noise_std: 0.01
+      probability: 0.3
+      
+    blur:
+      enabled: true
+      max_kernel_size: 3
+      probability: 0.2
+      
+  # Feature-level augmentation
+  feature_level:
+    landmark_noise:
+      enabled: true
+      noise_std: 0.01
+      probability: 0.3
+      
+    temporal_jitter:
+      enabled: true
+      jitter_range: 0.05
+      probability: 0.2
+      
+  # Advanced augmentations
+  advanced:
+    mixup:
+      enabled: false
+      alpha: 0.2
+      probability: 0.1
+      
+    cutmix:
+      enabled: false
+      alpha: 1.0
+      probability: 0.1
+      
+  # Augmentation pipeline
+  pipeline:
+    num_augmentations: 5
+    random_order: true
+    preserve_original: true

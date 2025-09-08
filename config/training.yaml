@@ -1,0 +1,77 @@
+# Training Configuration - Ultra-optimized for 95%+ accuracy
+training:
+  # Model settings
+  model:
+    name: "AdvancedHandGestureNet"
+    architecture: "mlp"
+    input_size: 39  # Enhanced features: 14 distances + 10 angles + 5 finger_lengths + 4 ratios + 5 joint_angles + 1 orientation (right hand only)
+    hidden_sizes: [512, 1024, 2048, 1024, 512, 256, 128]
+    num_classes: 10
+    dropout_rate: 0.1
+    use_batch_norm: true
+    use_residual: true
+    activation: "mish"
+    
+  # Training parameters
+  hyperparameters:
+    batch_size: 16
+    learning_rate: 0.0001
+    epochs: 1000
+    early_stopping_patience: 150
+    lr_scheduler:
+      type: "CosineAnnealingWarmRestarts"
+      T_0: 200
+      T_mult: 2
+      eta_min: 1e-8
+    
+  # Data settings
+  data:
+    train_split: 0.7
+    val_split: 0.15
+    test_split: 0.15
+    shuffle: true
+    random_seed: 42
+    both_hands: false  # If false, only use right hand data; if true, use both hands
+    
+  # Augmentation
+  augmentation:
+    enabled: true
+    rotation_range: 2
+    scale_range: 0.005
+    noise_std: 0.0001
+    brightness_range: 0.01
+    feature_dropout: 0.01
+    mixup_alpha: 0.02
+    
+  # Optimization
+  optimizer:
+    type: "AdamW"
+    weight_decay: 1e-4
+    betas: [0.9, 0.999]
+    eps: 1e-8
+    
+  # Loss function
+  loss:
+    type: "CrossEntropyLoss"
+    label_smoothing: 0.01
+    
+  # Monitoring
+  monitoring:
+    log_interval: 5
+    save_interval: 50
+    plot_interval: 5
+    use_wandb: true
+    use_tensorboard: true
+    
+  # Paths
+  paths:
+    data_path: "data/processed"
+    model_save_path: "models/trained"
+    log_path: "logs/training"
+    checkpoint_path: "models/checkpoints"
+    
+  # Evaluation
+  evaluation:
+    metrics: ["accuracy", "precision", "recall", "f1", "confusion_matrix"]
+    save_predictions: true
+    generate_report: true

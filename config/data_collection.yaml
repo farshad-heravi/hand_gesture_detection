@@ -1,0 +1,57 @@
+# Data Collection Configuration
+data_collection:
+  # Dataset settings
+  dataset:
+    name: "hand_gesture_dataset_v2"
+    base_path: "data/raw"
+    gestures:
+      - "palm_upward"
+      - "index_upward" 
+      - "fist"
+      - "thumb_up"
+      - "thumb_down"
+      - "two_finger_up"
+      - "grip"
+      - "closed_hand"
+      - "vertical_fingers"
+      - "index_left"
+    
+  # Camera settings
+  camera:
+    device_id: 4
+    width: 640
+    height: 480
+    fps: 30
+    
+  # MediaPipe settings
+  mediapipe:
+    mode: "image"
+    max_num_hands: 1
+    min_detection_confidence: 0.8
+    min_tracking_confidence: 0.9
+    
+  # Collection settings
+  collection:
+    samples_per_gesture: 1000
+    min_confidence_threshold: 0.7
+    roi_size: [320, 320]
+    save_annotated: true
+    save_keypoints: true
+    save_images: true
+    
+    # Continuous mode settings
+    continuous_fps: 2.0  # Capture rate in continuous mode (samples per second)
+    min_consecutive_frames: 3  # Minimum consecutive good frames before capturing
+    
+  # Quality control
+  quality:
+    min_hand_landmarks: 20
+    max_missing_frames: 5
+    validate_gesture_consistency: true
+    
+  # UI settings
+  ui:
+    show_confidence: true
+    show_landmarks: true
+    show_roi: true
+    display_fps: true
